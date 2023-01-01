@@ -1,0 +1,31 @@
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+        <body>
+          
+        <h1 class="m-5 "  >Iniciar sesion</h1>
+        <form class= "m-5" #f='ngForm' (ngSubmit)="onLogin()" novalidate >
+        
+  
+          <div  class= "form-outline mb-5">
+            <label for="nombreUsuario" class="form-label">Correo Electronico</label>
+            <input type="email" id="nombreUsuario"  name="nombreUsuario"  class="form-control" [(ngModel)]="nombreUsuario"  [ngModelOptions]="{standalone: true}" required/>
+           
+      
+          </div>
+          <div class="form-outline  mb-5">
+            <label for="password" class="form-label">Contraseña</label>
+
+            <input  type="password" id="password"  class="form-control" [(ngModel)]="password"   [ngModelOptions]="{standalone: true}" required />
+
+        
+              
+          </div>
+        
+          <button type="submit" class="btn btn-dark">Enviar</button>
+        </form>
+        </body>
+      </div>
+    </div>
+  </div>

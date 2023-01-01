@@ -1,0 +1,28 @@
+
+
+body {
+    background-color: rgb(33, 37, 41);
+  }
+  
+  .negro {
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .m-5 {
+    margin: 5px;
+  }
+
+  .form-outline {
+    background-color: #5edeec5b;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .form-outline:before {
+    
+    font-family: FontAwesome;
+  }  
+

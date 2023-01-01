@@ -1,0 +1,148 @@
+<nav class="navbar  navbar-expand-lg bg-dark">
+  <div class="container-fluid  ">
+   
+    <a href="">
+      <img src="assets\img\CC.png" alt="Logo HTML5" width="100px">
+    </a>
+    <a
+    
+      class="navbar-brand"
+      href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa"
+      target="blank"
+    >
+   
+      <img [src]="miPortfolio?.LogoAP " alt="Logo HTML5" width="230px"
+      
+      
+    /></a>
+    <li class="nav-item dropdown">
+      <button
+        type="button"
+        class="btn btn-primary dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        
+      >
+        Secciones
+      </button>
+      <ul class="dropdown-menu dropdown-menu-dark"  style="margin-left: 0rem">
+        <li>
+          <a class="dropdown-item" href="#item-header">Acerca de mi</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#item-historial"
+            >Historial academico</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" href="#item-experiencia"
+            >Experiencia laboral y Skills</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" href="#item-Proyectos"
+            >Proyectos</a
+          >
+        </li>
+        <li>
+          <hr class="dropdown-divider" />
+        </li>
+        <li><a class="dropdown-item" href="#item-contacto">Contacto</a></li>
+      </ul>
+    </li>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--div class="collapse navbar-collapse" id="navbarSupportedContent"-->
+
+    
+      <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        
+        
+    
+       
+          <a
+            class="navbar-brand"
+            href="https://www.instagram.com/cristiancrispens02/"
+            target="blank"
+          >
+            <i
+              class="bi bi-instagram"
+              style="font-size: 2.5rem; color: rgb(28, 87, 253)"
+            >
+            </i>
+          </a>
+
+          <a
+            class="navbar-brand"
+            href="https://www.linkedin.com/in/cristian-crispens-608b48241/ "
+            target="blank"
+            id="linkedin"
+          >
+            <i
+              class="bi bi-linkedin"
+              style="font-size: 2.5rem; color: rgb(28, 87, 253)"
+            >
+            </i>
+          </a>
+
+          <a
+            class="navbar-brand"
+            href="https://github.com/Crispens02"
+            target="blank"
+          >
+            <i
+              class="bi bi-github"
+              style="font-size: 2.5rem; color: rgb(28, 87, 253)"
+            >
+            </i>
+          </a>
+          <button type="button"
+           class="btn btn-primary border border-dark border-2 text-dark" 
+          data-bs-toggle="modal" 
+          data-bs-target="#exampleModal" data-bs-whatever="@mdo"   
+          (click)="login()" *ngIf="!isLogged"><h1>→</h1></button>
+          <button type="button" class="btn btn-primary  border-dark border-2"
+          (click)="onLogOut()" *ngIf="isLogged"><h1>←</h1></button>
+      </ul>
+    
+    </div>
+  </div>
+</nav>
+
+
+<!--Circulo de perfil-->
+
+  <img
+    [src]="miPortfolio?.Portada"
+    alt="Logo HTML5"
+    width="100%"
+    height="100%"
+  />
+
+  <div class="container " >
+    
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="circulo">
+          <img [src]="miPortfolio?.Perfil" class="imagen" />
+        </div>
+        <h1>{{ miPortfolio?.name }}</h1>
+
+        <br />
+        <br />
+      </div>
+    </div>
+  
+  </div>
+  
+

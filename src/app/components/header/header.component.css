@@ -1,0 +1,17 @@
+
+
+.circulo {
+    width: 300px;
+    height: 300px;
+   
+  }
+
+  
+  .circulo > .imagen {
+    width: 266px;
+    height: 300px;
+    border-radius: 100%;
+    margin-left: 0%;
+    margin-block-start: -15%;
+  }
+
