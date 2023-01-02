@@ -1,28 +1,42 @@
 
 
-body {
-    background-color: rgb(33, 37, 41);
-  }
-  
-  .negro {
-    color: black;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .m-5 {
-    margin: 5px;
-  }
+ /* Ajustes generales de la página */
 
-  .form-outline {
-    background-color: #5edeec5b;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    padding: 20px;
-    position: relative;
-  }
+
+/* Estilo para el encabezado */
+body{
+  background-color: rgb(0, 59, 126);
   
-  .form-outline:before {
-    
-    font-family: FontAwesome;
-  }  
+}
+h1.center {
+
+  text-align: center;
+  
+}
+
+/* Estilo para el formulario */
+form {
+  width: 35%;
+  margin: 0 auto; 
+  padding: 2em;
+  background-color: rgb(224, 224, 224);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para los elementos del formulario */
+label.form-label {
+  
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+input.form-control {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 1em;
+}
 
