@@ -1,0 +1,84 @@
+<!--  <h1>Experiencia laboral</h1>
+<div class="col-lg-2">
+  <button type="button" class="btn btn-primary" routerLink="/nuevaexp" *ngIf="isLogged">
+      Nueva Experiencia
+  </button>
+ 
+</div>
+<table class="table">
+  <tbody>
+    <br>
+    <tr *ngFor="let Experiencia of expe">
+        <td>
+            <h2>{{Experiencia.nombreE}}</h2>
+        </td>
+        <td><p>{{Experiencia.descripcionE}}</p></td>
+        <td *ngIf="isLogged">
+         
+            <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">
+                <i class="bi bi-pencil-fill"></i> EDITAR</button>
+              
+        </td>
+        <td *ngIf="isLogged">
+        
+            <button class="btn btn-danger" (click)="delete(Experiencia.id)">
+                <i class="bi bi-trash-fill"></i> BORRAR</button>
+           
+        </td>
+    </tr>
+</tbody>
+</table>
+<br>
+ -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <br>
+
+      <h1>Experiencia laboral</h1>
+
+      <button
+        type="button"
+        class="btn btn-primary"
+        routerLink="/nuevaexp"
+        *ngIf="isLogged"
+      >
+        Nueva Experiencia
+      </button>
+
+      <tr *ngFor="let Experiencia of expe">
+        <br>
+
+        <h2>
+          <img src="{{ Experiencia.imgE }}" width="50" height="35" alt="" />
+          {{ Experiencia.nombreE }}
+        </h2>
+
+        <br>
+        <ul>
+          <li>
+          <p>{{ Experiencia.descripcionE }}</p>
+          </li>
+        </ul>
+        <td *ngIf="isLogged">
+          <button
+            class="edit-button"
+            routerLink="/editexp/{{ Experiencia.id }}"
+          >
+            <i class="bi bi-pencil-fill"></i>
+          </button>
+        </td>
+        <td *ngIf="isLogged">
+          <div class="margen">
+            <button class="delete-button" (click)="delete(Experiencia.id)">
+              <i class="bi bi-trash-fill"></i> 
+            </button>
+          </div>
+        </td>
+      </tr>
+
+      <br>
+
+    </div>
+  </div>
+</div>

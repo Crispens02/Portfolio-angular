@@ -1,0 +1,171 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+
+
+<!-- <h1>Skills</h1>
+      <br />
+      <h5>Ingles</h5>
+      <div class="progress">
+        <div
+          class="progress-bar bg-success"
+          role="progressbar"
+          style="width: 25%"
+          aria-valuenow="25"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <br />
+      <br />
+      <h5>HTML</h5>
+      <div class="progress">
+        <div
+          class="progress-bar bg-info"
+          role="progressbar"
+          style="width: 35%"
+          aria-valuenow="50"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <br />
+      <br />
+      <h5>CSS</h5>
+      <div class="progress">
+        <div
+          class="progress-bar bg-warning"
+          role="progressbar"
+          style="width: 25%"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <br />
+      <br />
+      <h5>Bootstrap</h5>
+      <div class="progress">
+        <div
+          class="progress-bar bg-danger"
+          role="progressbar"
+          style="width: 40%"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <br />
+      <br />
+      <h5>Typescript</h5>
+      <div class="progress">
+        <div
+          class="progress-bar bg-success"
+          role="progressbar"
+          style="width: 15%"
+          aria-valuenow="20"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <br />
+      <br />
+      <h5>Javascript</h5>
+      <div class="progress">
+        <div
+          class="progress-bar bg-info"
+          role="progressbar"
+          style="width: 30%"
+          aria-valuenow="50"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <br />
+      <br />
+      <h5>Trabajo en equipo</h5>
+      <div class="progress">
+        <div
+          class="progress-bar bg-warning"
+          role="progressbar"
+          style="width: 70%"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <br />
+      <br />
+      <h5>Git/Github</h5>
+      <div class="progress">
+        <div
+          class="progress-bar bg-success"
+          role="progressbar"
+          style="width: 60%"
+          aria-valuenow="20"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <br />
+      <br />
+      <h5>Python</h5>
+      <div class="progress">
+        <div
+          class="progress-bar bg-success"
+          role="progressbar"
+          style="width: 55%"
+          aria-valuenow="20"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+  
+
+
+<br>
+<br> -->
+
+      <h1>Hard & Soft skills</h1>
+     
+          <button type="button" routerLink="/newskill" class="btn btn-primary" *ngIf="isLogged">Nueva Skill</button>
+      </div>
+ 
+  
+      <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let Hyss of skill">
+        <br>
+        
+        <div>
+          <td *ngIf="isLogged">
+              <button class="edit-button" routerLink="/editskill/{{Hyss.id}}">
+                  <i class="bi bi-pencil-fill"></i></button>
+          </td>
+          <td *ngIf="isLogged">
+              <button class="delete-button" (click)="delete(Hyss.id)">
+                  <i class="bi bi-trash-fill"></i></button>
+          </td>
+      </div>
+          <circle-progress 
+          [percent]="(Hyss.porcentaje)" 
+          [radius]="90" [imageSrc]="''" 
+          [title]="(Hyss.nombre)"
+          [titleColor]="'#FFFFFF'"
+          [showTitle]="true" 
+          [showImage]="false" 
+          [imageHeight]="70" 
+          [imageWidth]="70" 
+          [showUnits]="false"
+          [showSubtitle]="false" 
+          [outerStrokeWidth]="16" 
+          [innerStrokeWidth]="2" 
+          [outerStrokeColor]="'#00d5ff'"
+          [innerStrokeColor]="'#87CEEB'" 
+          [animation]="true" 
+          [animationDuration]="600">
+          </circle-progress>
+
+       
+          
+      </div>
+  
+    
