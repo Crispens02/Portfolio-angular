@@ -9,6 +9,7 @@ import { EdithistorialComponent } from './components/historial/edithistorial.com
 import { NewprojectComponent } from './components/proyectos/newproject.component';
 import { NewHyssComponent } from './components/hyss/new-hyss.component';
 import { EditHyssComponent } from './components/hyss/edit-hyss.component';
+import { EditAboutMeComponent } from './components/about-me/edit-about-me.component';
 const routes: Routes = [
   {path: '',component:HomeComponent},
   {path: 'login',component:LoginComponent},
@@ -18,8 +19,8 @@ const routes: Routes = [
   { path: 'editHis/:id', component: EdithistorialComponent},
   { path: 'newproject', component: NewprojectComponent},
   { path: 'newskill', component: NewHyssComponent},
-  { path: 'editskill/:id', component: EditHyssComponent}
-  
+  { path: 'editskill/:id', component: EditHyssComponent},
+  { path: 'editabout/:id', component: EditAboutMeComponent}
 /* {path: '', redirectTo: 'login', pathMatch: 'full'} */
 ];
 

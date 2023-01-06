@@ -22,6 +22,7 @@ import { NewprojectComponent } from './components/proyectos/newproject.component
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { EditHyssComponent } from './components/hyss/edit-hyss.component';
 import { NewHyssComponent } from './components/hyss/new-hyss.component';
+import { EditAboutMeComponent } from './components/about-me/edit-about-me.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { NewHyssComponent } from './components/hyss/new-hyss.component';
     HyssComponent,
     NewprojectComponent,
     EditHyssComponent,
-    NewHyssComponent
+    NewHyssComponent,
+    EditAboutMeComponent
 
   ],
   imports: [
