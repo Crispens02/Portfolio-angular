@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./edit-hyss.component.css']
 })
 export class EditHyssComponent implements OnInit {
-  skill: Skill = null;
+  skill: Skill = undefined;
 
   constructor(
     private skillS: SkillService,
