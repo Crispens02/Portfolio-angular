@@ -33,7 +33,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <br>
+      <br />
 
       <h1>Experiencia laboral</h1>
 
@@ -47,17 +47,17 @@
       </button>
 
       <tr *ngFor="let Experiencia of expe">
-        <br>
+        <br />
 
         <h2>
           <img src="{{ Experiencia.imgE }}" width="40" height="35" alt="" />
           {{ Experiencia.nombreE }}
         </h2>
 
-        <br>
+        <br />
         <ul>
           <li>
-          <p>{{ Experiencia.descripcionE }}</p>
+            <p>{{ Experiencia.descripcionE }}</p>
           </li>
         </ul>
         <td *ngIf="isLogged">
@@ -71,14 +71,13 @@
         <td *ngIf="isLogged">
           <div class="margen">
             <button class="delete-button" (click)="delete(Experiencia.id)">
-              <i class="bi bi-trash-fill"></i> 
+              <i class="bi bi-trash-fill"></i>
             </button>
           </div>
         </td>
       </tr>
 
-      <br>
-
+      <br />
     </div>
   </div>
 </div>

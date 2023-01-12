@@ -3,87 +3,37 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-     
- <!--  
-
       <h1>Proyectos</h1>
-      <br>
-      <ul>
-        <li>
-          <h4>
-            <img [src]="miPortfolio?.Portfolio" width="25%"  alt=""  />
-            Porfolio #YoProgramo
-          </h4>
-        </li>
 
+      <button
+        type="button"
+        class="btn btn-primary"
+        routerLink="/newproject"
+        *ngIf="isLogged"
+      >
+        Nuevo Proyecto
+      </button>
+
+      <tr *ngFor="let Proyecto of project">
         <br />
-        <li>
-          <a
-    
-          class="navbar-brand"
-          href="https://crispens02.github.io/RR/"
-          target="blank"
-        >
-          <h4>
-            <img [src]="miPortfolio?.RR" width="25%"  /> Pagina de
-            fotografia.
-          </h4>
-          </a>
-        </li>
-      </ul>
-
+        <ul>
+          <li>
+            <h4>
+              <img src="{{ Proyecto.imgP }}" width="25%" alt="" />
+              {{ Proyecto.nombreP }}
+            </h4>
+          </li>
+        </ul>
+        <td *ngIf="isLogged">
+          <div class="margen">
+            <button class="edit-button" (click)="delete(Proyecto.id)">
+              <i class="bi bi-trash-fill"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
       <br />
       <br />
-   
- 
-  -->
-
-
- <h1>Proyectos</h1>
-
- <button
- type="button"
- class="btn btn-primary"
- routerLink="/newproject"
- *ngIf="isLogged"
->
-Nuevo Proyecto
-</button>
-
-<tr *ngFor="let Proyecto of project">
-  <br>
-  <ul>
-  <li>
-    <h4>
-      <img src="{{ Proyecto.imgP }}" width="25%" alt="" />
-      {{ Proyecto.nombreP }}
-    </h4>
-  </li>
-</ul>
-<td *ngIf="isLogged">
-  <div class="margen">
-    <button class="edit-button" (click)="delete(Proyecto.id)">
-      <i class="bi bi-trash-fill"></i> 
-    </button>
-  </div>
-</td>
-</tr>
-<br>
-<br>
-
-
-
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-

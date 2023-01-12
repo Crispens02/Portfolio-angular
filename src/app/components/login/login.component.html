@@ -1,36 +1,31 @@
-
 <body>
- 
-      <h1 class=" center bodycolor">Iniciar sesion</h1>
-      <form  #f="ngForm" (ngSubmit)="onLogin()" novalidate>
-        <div class="form-outline mb-3">
-          <label for="nombreUsuario" class="form-label"
-            >Usuario</label
-          >
-          <input
-            type="email"
-            id="nombreUsuario"
-            name="nombreUsuario"
-            class="form-control"
-            [(ngModel)]="nombreUsuario"
-            [ngModelOptions]="{ standalone: true }"
-            required
-          />
-        </div>
-        <div class="form-outline mb-3">
-          <label for="password" class="form-label">Contraseña</label>
+  <h1 class="center bodycolor">Iniciar sesion</h1>
+  <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+    <div class="form-outline mb-3">
+      <label for="nombreUsuario" class="form-label">Usuario</label>
+      <input
+        type="email"
+        id="nombreUsuario"
+        name="nombreUsuario"
+        class="form-control"
+        [(ngModel)]="nombreUsuario"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      />
+    </div>
+    <div class="form-outline mb-3">
+      <label for="password" class="form-label">Contraseña</label>
 
-          <input
-            type="password"
-            id="password"
-            class="form-control"
-            [(ngModel)]="password"
-            [ngModelOptions]="{ standalone: true }"
-            required
-          />
-        </div>
+      <input
+        type="password"
+        id="password"
+        class="form-control"
+        [(ngModel)]="password"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      />
+    </div>
 
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </form>
-
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
 </body>

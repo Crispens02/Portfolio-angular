@@ -10,7 +10,8 @@ import { Persona } from '../model/persona.model';
 })
 
 export class PersonaService {
-   URL = 'http://localhost:8080/personas/';
+  /* URL = 'http://localhost:8080/personas/' */
+   URL = 'https://portfolio-web-crispens.onrender.com/personas/';
 
    constructor(private httpClient: HttpClient) {}
 
@@ -30,7 +31,7 @@ export class PersonaService {
      return this.httpClient.put<any>(this.URL + `update/${id}`, persona);
    }
  
-   public delete(id: number): Observable<any> {
+/*    public delete(id: number): Observable<any> {
      return this.httpClient.delete<any>(this.URL + `delete/${id}`);
-   } 
+   }  */
  }

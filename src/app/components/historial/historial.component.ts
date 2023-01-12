@@ -12,7 +12,6 @@ import { Educacion } from 'src/app/model/educacion';
 export class HistorialComponent implements OnInit {
   educacion: Educacion[] = [];
   miPortfolio: any;
- 
 
   constructor(
     private datosPortfolio: PortfolioService,
@@ -27,30 +26,29 @@ export class HistorialComponent implements OnInit {
     });
 
     this.cargarEducacion();
-    if(this.tokenService.getToken()){
+    if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
       this.isLogged = false;
     }
   }
 
-    cargarEducacion(): void{
-    this.educacionS.lista().subscribe(
-      data =>{
-        this.educacion = data;
-      }
-    )
+  cargarEducacion(): void {
+    this.educacionS.lista().subscribe((data) => {
+      this.educacion = data;
+    });
   }
 
-  delete(id?: number){
-    if( id != undefined){
+  delete(id?: number) {
+    if (id != undefined) {
       this.educacionS.delete(id).subscribe(
-        data => {
+        (data) => {
           this.cargarEducacion();
-        }, err => {
-          alert("No se pudo eliminar");
+        },
+        (err) => {
+          alert('No se pudo eliminar');
         }
-      )
+      );
     }
   }
 }

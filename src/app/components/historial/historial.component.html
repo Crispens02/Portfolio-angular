@@ -1,93 +1,46 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-   <!--    <br />
+      <br />
+      <br />
 
-    <h1>Historial academico</h1>
+      <h1>Historial academico</h1>
 
-      <ul>
-        <li>
-          <h4>
-            <img [src]="miPortfolio?.iconoAP" width="50" height="35" />
-            Argentina programa
-          </h4>
-        </li>
-        <p><b> Segunda etapa #YoProgramo</b></p>
-        <p>
-          <b> Contenidos aprendidos durante el curso:</b>
-          {{ miPortfolio?.temasAP }}
-        </p>
-        <p><b> Fecha de realización:</b> Junio 2022 - Enero 2023</p>
+      <button
+        type="button"
+        class="btn btn-primary"
+        routerLink="/nuevoHis"
+        *ngIf="isLogged"
+      >
+        Agregar Educacion
+      </button>
+      <tr *ngFor="let Educacion of educacion">
+        <br />
 
-        <li>
-          <h4>
-            <img [src]="miPortfolio?.iconoUNER" width="50" height="35" />
-            Universidad Nacional de Entre Rios
-          </h4>
-        </li>
-        <p>
-          <b>
-            Tecnicatura universitaria en procesamiento y explotacion de
-            datos.</b
-          >
-        </p>
-        <p><b>Estudios no finalizados.</b></p>
-
-        <p>Julio 2019 - Abril 2022</p>
-      </ul>
-
-   
-
-
-      
-            <br />
- -->
-<br>
-<br>
-
-            <h1>Historial academico</h1>
-
-            <button
-              type="button"
-              class="btn btn-primary"
-              routerLink="/nuevoHis"
-              *ngIf="isLogged"
-            >
-              Agregar Educacion
+        <h2>
+          <img src="{{ Educacion.imgE }}" width="40" height="35" alt="" />
+          {{ Educacion.nombreE }}
+        </h2>
+        <br />
+        <ul>
+          <li>
+            <p><b>Descripcion de los estudios: </b></p>
+            <p>{{ Educacion.descripcionE }}</p>
+          </li>
+        </ul>
+        <td *ngIf="isLogged">
+          <button class="edit-button" routerLink="/editHis/{{ Educacion.id }}">
+            <i class="bi bi-pencil-fill"></i>
+          </button>
+        </td>
+        <td *ngIf="isLogged">
+          <div class="margen">
+            <button class="delete-button" (click)="delete(Educacion.id)">
+              <i class="bi bi-trash-fill"></i>
             </button>
-            <tr *ngFor="let Educacion of educacion">
-              <br />
-
-              <h2>
-                <img src="{{ Educacion.imgE }}" width="40" height="35" alt="" />
-                {{ Educacion.nombreE }}
-              </h2>
-              <br />
-              <ul>
-                <li>
-                  <p><b>Contenidos aprendidos durante el curso:</b></p>
-                  <p>{{ Educacion.descripcionE }}</p>
-                </li>
-              </ul>
-              <td *ngIf="isLogged">
-                <button
-                  class="edit-button"
-                  routerLink="/editHis/{{ Educacion.id }}"
-                >
-                  <i class="bi bi-pencil-fill"></i>
-                </button>
-              </td>
-              <td *ngIf="isLogged">
-                <div class="margen">
-                  <button class="delete-button" (click)="delete(Educacion.id)">
-                    <i class="bi bi-trash-fill"></i> 
-                  </button>
-                </div>
-              </td>
-            </tr>
-
-          
-       
+          </div>
+        </td>
+      </tr>
     </div>
   </div>
 </div>

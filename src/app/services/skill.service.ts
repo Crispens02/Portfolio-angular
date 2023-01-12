@@ -15,7 +15,8 @@ import { Skill } from '../model/skill';
 })
 export class SkillService {
   
-  URL = 'http://localhost:8080/hyss/';
+  /* URL = 'http://localhost:8080/hyss/' */
+   URL = 'https://portfolio-web-crispens.onrender.com/hyss/';
   
   constructor(private httpClient: HttpClient) { }
 

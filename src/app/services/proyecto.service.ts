@@ -10,7 +10,8 @@ import { Proyecto } from '../model/proyecto';
 export class ProyectoService {
 
 
-  URL = 'http://localhost:8080/proyecto/';
+ /*  URL = 'http://localhost:8080/proyecto/' */
+   URL = 'https://portfolio-web-crispens.onrender.com/proyecto/';
 
   constructor(private httpClient : HttpClient) { }
 
@@ -18,9 +19,9 @@ export class ProyectoService {
     return this.httpClient.get<Proyecto[]>(this.URL + 'lista');
   }
 
-  public detail(id: number): Observable<Proyecto>{
+/*   public detail(id: number): Observable<Proyecto>{
     return this.httpClient.get<Proyecto>(this.URL + `detail/${id}`);
-  }
+  } */
 
   public save(proyecto: Proyecto): Observable<any>{
     return this.httpClient.post<any>(this.URL + 'create', proyecto);

@@ -1,20 +1,36 @@
-<div class="container">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="nombreH">Nombre de la skill</label>
-                    <input type="text" class="form-control" id="nombreH" name="nombreH" [(ngModel)]="nombre" required>
-                </div>
-              
-                <div class="form-group">
-                    <label for="porcentajeH">Porcentaje de la Skill</label>
-                    <input type="text" class="form-control" id="porcentajeH" name="porcentajeH" [(ngModel)]="porcentaje" required>
-                </div>
-                <button class="btn btn-primary">
-                    Agregar skill
-                </button>
-            </form>
+
+<div  *ngIf="!isLogged">
+  <h1> usted no tiene acceso</h1>
+</div>
+<div class="container" *ngIf="isLogged">
+  <div class="row">
+    <div   >
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="nombreH">Nombre de la skill</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nombreH"
+            name="nombreH"
+            [(ngModel)]="nombre"
+            required
+          />
         </div>
+
+        <div class="form-group">
+          <label for="porcentajeH">Porcentaje de la Skill</label>
+          <input
+            type="text"
+            class="form-control"
+            id="porcentajeH"
+            name="porcentajeH"
+            [(ngModel)]="porcentaje"
+            required
+          />
+        </div>
+        <button class="btn btn-primary">Agregar skill</button>
+      </form>
     </div>
+  </div>
 </div>

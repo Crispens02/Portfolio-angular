@@ -1,49 +1,28 @@
-<div>
-<img
-[src]="miPortfolio?.Portada"
-alt="Logo HTML5"
-width="100%"
-height="100%"
-/>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="container">
+        <div class="circulo">
+          <img src="{{ persona.img }}" class="imagen" id="fotodeperfil" />
+        </div>
+        <br />
+        <br />
+        <h1 id="nombre">{{ persona.nombre }} {{ persona.apellido }}</h1>
 
-<div class="container"
->
-    <div class="row">
-    <div class="col-sm-12"
-  
-   >
+        <button
+          type="button"
+          class="btn btn-primary"
+          routerLink="/editabout/1"
+          *ngIf="isLogged"
+        >
+          Editar persona
+        </button>
 
-  
-
- <div class="container " >
-   
-       <div class="circulo">
-         <img src={{persona.img}} class="imagen" id="fotodeperfil" >
-       </div>
-       <h1 id="nombre">{{ persona.nombre }} {{persona.apellido}}</h1>
-      
-       
-       <button
-        type="button"
-        class="btn btn-primary"
-        routerLink="/editabout/1"
-        *ngIf="isLogged"
-      >
-        Editar persona
-         
-
-
-      </button>
-      
-   <br>
-    <h3 >Acerca de mi</h3>
-    <br>
-    <h5>{{persona.descripcion}}
-    </h5>
-</div>
-</div>
-</div>
-
-</div>
-
+        <br />
+        <h3>Acerca de mi</h3>
+        <br />
+        <h5>{{ persona.descripcion }}</h5>
+      </div>
+    </div>
+  </div>
 </div>
