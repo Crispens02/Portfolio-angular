@@ -10,7 +10,7 @@ import { Proyecto } from '../model/proyecto';
 export class ProyectoService {
 
 
- /*  URL = 'http://localhost:8080/proyecto/' */
+  /* URL = 'http://localhost:8080/proyecto/' */
    URL = 'https://portfolio-web-crispens.onrender.com/proyecto/';
 
   constructor(private httpClient : HttpClient) { }

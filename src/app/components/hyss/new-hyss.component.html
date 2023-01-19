@@ -1,10 +1,9 @@
-
-<div  *ngIf="!isLogged">
-  <h1> usted no tiene acceso</h1>
+<div *ngIf="!isLogged">
+  <h1>usted no tiene acceso</h1>
 </div>
 <div class="container" *ngIf="isLogged">
   <div class="row">
-    <div   >
+    <div>
       <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
         <div class="form-group">
           <label for="nombreH">Nombre de la skill</label>
@@ -26,6 +25,41 @@
             id="porcentajeH"
             name="porcentajeH"
             [(ngModel)]="porcentaje"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="imgH">Imagen de la Skill</label>
+          <input
+            type="text"
+            class="form-control"
+            id="imgH"
+            name="imgH"
+            [(ngModel)]="img"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="colorpicker">color exterior del circulo</label>
+          <br />
+          <input
+            type="color"
+            value="#0000ff"
+            id="colorexterior"
+            name="colorexterior"
+            [(ngModel)]="colorexterior"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="colorpicker">color interior del circulo</label>
+          <br />
+          <input
+            type="color"
+            value="#0000ff"
+            id="colorinterior"
+            name="colorinterior"
+            [(ngModel)]="colorinterior"
             required
           />
         </div>

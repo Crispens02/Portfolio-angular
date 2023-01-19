@@ -12,6 +12,9 @@ export class NewHyssComponent implements OnInit {
   skill: Skill[] = [];
   nombre: string;
   porcentaje: number;
+  colorexterior: string;
+  colorinterior: string;
+  img: string;
   isLogged = false;
   constructor(
     private skillS: SkillService,
@@ -34,7 +37,13 @@ export class NewHyssComponent implements OnInit {
   }
 
   onCreate(): void {
-    const skill = new Skill(this.nombre, this.porcentaje);
+    const skill = new Skill(
+      this.nombre,
+      this.porcentaje,
+      this.colorinterior,
+      this.colorexterior,
+      this.img
+    );
     this.skillS.save(skill).subscribe(
       (data) => {
         alert('Skill creada correctamente');

@@ -31,26 +31,40 @@
           </button>
         </td>
       </div>
-      <circle-progress
-        [percent]="Hyss.porcentaje"
-        [radius]="90"
-        [imageSrc]="''"
-        [title]="Hyss.nombre"
-        [titleColor]="'#FFFFFF'"
-        [showTitle]="true"
-        [showImage]="false"
-        [imageHeight]="70"
-        [imageWidth]="70"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="2"
-        [outerStrokeColor]="'#00d5ff'"
-        [innerStrokeColor]="'#87CEEB'"
-        [animation]="true"
-        [animationDuration]="600"
-      >
-      </circle-progress>
+      <figure>
+        <circle-progress
+          [percent]="Hyss.porcentaje"
+          [radius]="90"
+          [imageSrc]="Hyss.img"
+          [title]="Hyss.nombre"
+          [titleColor]="'#FFFFFF'"
+          [showTitle]="true"
+          [showImage]="true"
+          [imageHeight]="70"
+          [imageWidth]="70"
+          [showUnits]="false"
+          [showSubtitle]="false"
+          [outerStrokeWidth]="16"
+          [innerStrokeWidth]="2"
+          [outerStrokeColor]="Hyss.colorexterior"
+          [innerStrokeColor]="Hyss.colorinterior"
+          [animation]="true"
+          [animationDuration]="600"
+        >
+          <h3
+            class="text-center text-white shadow-full p-3 rounded-3 m-0 w-100"
+            style="
+              background-color: #00000054;
+              border: 2px #69696964;
+              border-style: inset;
+              cursor: not-allowed;
+            "
+          >
+            {{ Hyss.nombre }}
+          </h3>
+        </circle-progress>
+        <figcaption style="color: white">{{ Hyss.nombre }}</figcaption>
+      </figure>
     </div>
   </div>
 </div>

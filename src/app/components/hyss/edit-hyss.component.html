@@ -28,6 +28,41 @@
               required
             />
           </div>
+          <div class="form-group">
+            <label for="img">Imagen de la Skill</label>
+            <input
+              type="text"
+              class="form-control"
+              id="img"
+              name="img"
+              [(ngModel)]="skill.img"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="colorpicker">color exterior del circulo</label>
+            <br />
+            <input
+              type="color"
+              value="#0000ff"
+              id="colorexterior"
+              name="colorexterior"
+              [(ngModel)]="skill.colorexterior"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="colorpicker">color interior del circulo</label>
+            <br />
+            <input
+              type="color"
+              value="#0000ff"
+              id="colorexterior"
+              name="colorexterior"
+              [(ngModel)]="skill.colorinterior"
+              required
+            />
+          </div>
           <button class="btn btn-primary">Actualizar</button>
         </form>
       </div>
