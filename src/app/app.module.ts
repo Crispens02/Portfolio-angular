@@ -23,6 +23,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { EditHyssComponent } from './components/hyss/edit-hyss.component';
 import { NewHyssComponent } from './components/hyss/new-hyss.component';
 import { EditAboutMeComponent } from './components/about-me/edit-about-me.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,9 @@ import { EditAboutMeComponent } from './components/about-me/edit-about-me.compon
     ReactiveFormsModule,
     FormsModule,
     NgCircleProgressModule.forRoot({ }),
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

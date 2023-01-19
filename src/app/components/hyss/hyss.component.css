@@ -18,12 +18,11 @@
   }
 
 
-figcaption {
-  display:none; 
-  transition: all .5s;
+  figcaption {
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 
 figure:hover > figcaption {
-  display:block;
-  transition: all .5s;
+    opacity: 1;
 }
