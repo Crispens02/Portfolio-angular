@@ -27,6 +27,11 @@
             <p><b>Descripcion de los estudios: </b></p>
             <p>{{ Educacion.descripcionE }}</p>
           </li>
+
+          <p>
+            {{ Educacion.fechaInicio | date : "MM/yyyy" }} -
+            {{ Educacion.fechaFinal | date : "MM/yyyy" }}
+          </p>
         </ul>
         <td *ngIf="isLogged">
           <button class="edit-button" routerLink="/editHis/{{ Educacion.id }}">

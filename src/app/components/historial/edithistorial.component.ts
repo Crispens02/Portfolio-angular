@@ -12,6 +12,7 @@ export class EdithistorialComponent implements OnInit {
   educacion: Educacion = null;
   edu: Educacion[] = [];
   isLogged = false;
+
   constructor(
     private educacionS: EducacionService,
     private activatedRouter: ActivatedRoute,

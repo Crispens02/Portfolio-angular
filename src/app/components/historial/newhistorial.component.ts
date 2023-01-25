@@ -13,7 +13,10 @@ export class NewhistorialComponent implements OnInit {
   nombreE: string;
   descripcionE: string;
   imgE: string;
+  fechaInicio: Date;
+  fechaFinal: Date;
   isLogged = false;
+  
   constructor(
     private educacionS: EducacionService,
     private router: Router,
@@ -35,7 +38,7 @@ export class NewhistorialComponent implements OnInit {
   }
 
   onCreate(): void {
-    const educacion = new Educacion(this.nombreE, this.descripcionE, this.imgE);
+    const educacion = new Educacion(this.nombreE, this.descripcionE, this.imgE, this.fechaInicio, this.fechaFinal);
     this.educacionS.save(educacion).subscribe(
       (data) => {
         alert('Educacion añadida correctamente');
