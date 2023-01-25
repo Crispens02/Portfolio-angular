@@ -5,3 +5,9 @@
   color: rgb(255, 255, 255);
 
 }
+
+@media (max-width: 767px) {
+  .res {
+    width: 70%;
+  }
+}

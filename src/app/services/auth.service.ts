@@ -9,8 +9,8 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root',
 })
 export class AuthService {
-  /* authURL = 'http://localhost:8080/auth/' */
-   authURL = 'https://portfolio-web-crispens.onrender.com/auth/';
+  authURL = 'http://localhost:8080/auth/'
+   /* authURL = 'https://portfolio-web-crispens.onrender.com/auth/'; */
   constructor(private httpclient: HttpClient) {}
 
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any> {

@@ -15,4 +15,10 @@
     border: 5px solid white; /* agregar un borde */
   }
 
+  @media (max-width: 768px){
+  .circulo {
+    width: 150px;
+  
+  }
+}
 
