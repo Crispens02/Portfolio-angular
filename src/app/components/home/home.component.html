@@ -1,12 +1,20 @@
 
 <div style="background-color: rgb(0, 59, 126)">
-    <app-header ></app-header>
+
+ <!--  <a href="#" id="toTopBtn" class="cd-top js-cd-top cd-top--is-visible cd-top--fade-out
+  float-button" [ngClass]="{'show': showButton}
+  " data-abc="true"></a> -->
+
+  <a href="#" id="toTopBtn" class="  cd-top js-cd-top cd-top--is-visible cd-top--fade-out float-button" 
+  [ngClass]="{'show': showButton, 'float-button-show': showButton}" *ngIf="showButton" data-abc="true"></a>
+
+  <app-header ></app-header>
     <app-about-me id="item-header"></app-about-me>
     <app-historial id="item-historial"></app-historial>
     <app-experiencia id="item-experiencia"></app-experiencia>
     <app-hyss id="item-hyss"></app-hyss>
     <app-proyectos id="item-Proyectos"></app-proyectos>
     <app-contacto id="item-contacto"></app-contacto>
-    
+ 
   </div>
 

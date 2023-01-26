@@ -1,0 +1,31 @@
+#toTopBtn {
+    position: fixed;
+    bottom: 50px;
+    right: 39px;
+opacity: 80%;
+    padding: 17px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+    
+
+}
+
+.float-button {
+    position: fixed;
+    bottom: 50px;
+    right: 39px;
+    
+}
+
+.float-button.show {
+    display: block;
+  
+    
+}
+
+
+.cd-top {
+    background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg) no-repeat center 50%;
+    transform: scale(2);
+   
+}
