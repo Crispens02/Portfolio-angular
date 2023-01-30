@@ -1,8 +1,18 @@
+h1,h2,span,ul,p {
+  margin-top: 1rem;
+}
+h1 {
+margin-bottom: 1rem;
+
+}
+span {
+  margin-bottom: 2rem;
+}
 .margen {
-    margin-left: 10px;
+    margin-left: 0.3rem;
 }
 
-.edit-button {
+.edit-button, .delete-button {
  
     border: none;
     background-color: transparent;
@@ -10,9 +20,4 @@
 
   }
 
-  .delete-button {
-   
-    border: none;
-    background-color: transparent;
-    color: white;
-  }
+ 

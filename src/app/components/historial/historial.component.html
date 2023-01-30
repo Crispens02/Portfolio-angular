@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <br />
-      <br />
+    
+    
 
       <h1>Historial academico</h1>
 
@@ -15,23 +15,22 @@
         Agregar Educacion
       </button>
       <tr *ngFor="let Educacion of educacion">
-        <br />
+      
 
         <h2>
-          <img src="{{ Educacion.imgE }}" width="40" height="35" alt="" />
+          <img src="{{ Educacion.imgE }}" width="40" height="35" alt="Imagen de educacion" />
           {{ Educacion.nombreE }}
         </h2>
-        <br />
+        
         <ul>
           <li>
-            <p><b>Descripcion de los estudios: </b></p>
+            <span><b>Descripcion de los estudios: </b></span>
             <p>{{ Educacion.descripcionE }}</p>
           </li>
-
-          <p>
+          <span>
             {{ Educacion.fechaInicio | date : "MM/yyyy" }}  -
             {{ Educacion.fechaFinal | date : "MM/yyyy" }}
-          </p>
+          </span>
         </ul>
         <td *ngIf="isLogged">
           <button class="edit-button" routerLink="/editHis/{{ Educacion.id }}">

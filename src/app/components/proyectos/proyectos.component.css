@@ -1,3 +1,7 @@
+h1, ul, img {
+  margin-top: 1rem;
+}
+
 .edit-button {
 
   border: none;

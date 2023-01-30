@@ -2,13 +2,14 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="alert alert-success" role="alert">
-        <img [src]="miPortfolio?.pie" width="100%" height="100%" alt="" />
+        <img  class = "imgPie"[src]="miPortfolio?.pie"   alt="Image Contact"  loading="lazy"/>
 
-        <h3 class="negro">Cristian Crispens</h3>
-        <h5 class="negro">Portfolio web</h5>
-        <h4 class="negro">
-          <img [src]="miPortfolio?.Gmailicon" width="50" height="35" alt="" />
-          {{ miPortfolio?.Correo }}
+        <h3 class="color">Cristian Crispens</h3>
+        <h4 class="color">Portfolio web </h4>
+        <h4 class="color">
+          <img  class ="imgGmail" [src] ="miPortfolio?.Gmailicon" alt="icono gmail" loading="lazy" />
+          <a href="mailto:{{miPortfolio?.Correo}}">{{miPortfolio?.Correo}}</a>
+         
         </h4>
       </div>
     </div>

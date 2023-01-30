@@ -1,28 +1,32 @@
 .margen {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
-.edit-button {
- 
-    border: none;
-    background-color: transparent;
-    color: white;
+.edit-button,
+.delete-button {
 
-  }
+  border: none;
+  background-color: transparent;
+  color: white;
 
-  .delete-button {
-   
-    border: none;
-    background-color: transparent;
-    color: white;
-  }
-
-
-  figcaption {
-    opacity: 0;
-    transition: opacity 1s ease;
 }
 
-figure:hover > figcaption {
-    opacity: 1;
+
+
+
+figcaption {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+figure:hover>figcaption {
+  opacity: 1;
+}
+
+h1 {
+  margin-top: 1rem;
+}
+
+button {
+  margin-bottom: 1rem;
 }

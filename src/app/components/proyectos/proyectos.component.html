@@ -1,5 +1,4 @@
-<br />
-<br />
+
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
@@ -15,26 +14,26 @@
       </button>
 
       <tr *ngFor="let Proyecto of project">
-        <br />
+      
         <ul>
           <li>
             <h4>
               {{ Proyecto.nombreP }}
             </h4>
-            <br />
-            <img class="res" src="{{ Proyecto.imgP }}" width="60%" alt="" />
+          
+            <img class="res" src="{{ Proyecto.imgP }}" width="60%" alt="imagen del proyecto" loading="lazy" />
           </li>
         </ul>
         <td *ngIf="isLogged">
           <div class="margen">
-            <button class="edit-button" (click)="delete(Proyecto.id)">
+            <button class="edit-button" (click)="delete(Proyecto.id)">  
               <i class="bi bi-trash-fill"></i>
             </button>
           </div>
         </td>
       </tr>
-      <br />
-      <br />
+    
+    
     </div>
   </div>
 </div>
