@@ -8,7 +8,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root',
 })
 export class SExperienciaService {
-/*   expURL = 'http://localhost:8080/explab/' */
+  /* expURL = 'http://localhost:8080/explab/' */
   expURL = 'https://portfolio-web-crispens.onrender.com/explab/';
 
   constructor(private httpClient: HttpClient) {}
