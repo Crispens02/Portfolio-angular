@@ -1,0 +1,26 @@
+{
+	"name": "Cristian Crispens",
+	"Perfil": "assets/img/perfil.webp",
+
+	"LogoAP": "assets/img/Argentina-programa.webp",
+	"Portada": "assets/img/portada.webp",
+
+
+	"pie": "assets/img/pie.webp",
+
+	"Aboutme": "Estudiante de Crespo Entre rios, con ganas de ampliar mis conocimientos para poder trabajar en esta area.",
+	"Sobremi": "Estudiante de Crespo Entre rios, con ganas de ampliar mis conocimientos para poder trabajar en esta area.",
+
+
+
+	"iconoAP": "assets/img/icono-ap.webp",
+	"temasAP": "Scrum, Github, HTML, CSS, Bootstrap, Javascript, Typescript, Angular, MySQL, Java, SpringBoot. ",
+
+	"iconoUNER": "assets/img//icono-uner.webp",
+    "bg": "assets/img/bg.webp",
+	"Correo": "Crispens02@gmail.com",
+	"Gmailicon": "assets/img/icon.gmail.webp",
+	"Portfolio": "assets/img/Portfolio.webp",
+	"RR": "assets/img/RR.webp"
+}
+
