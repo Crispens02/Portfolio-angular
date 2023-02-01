@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from "@angular/core";
+import { debounce } from "lodash";
 
 @Component({
   selector: "app-home",
@@ -7,30 +8,22 @@ import { Component, OnInit, HostListener } from "@angular/core";
 })
 export class HomeComponent implements OnInit {
   showButton = false;
- 
-  timeoutId: any;
- 
+
   constructor() {}
 
   ngOnInit(): void {}
 
   @HostListener("document:scroll", [])
-  onScroll() {
-    if (this.timeoutId) {
-      clearTimeout(this.timeoutId);
+  onScroll = debounce(() => {
+    const scroll = window.pageYOffset || document.body.scrollTop || 0;
+    if (scroll >= 100) {
+      this.showButton = true;
+    } else {
+      this.showButton = false;
     }
-    this.timeoutId = setTimeout(() => {
-      const scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      if (scroll >= 100) {
-        this.showButton = true;
-      } else {
-        this.showButton = false;
-      }
-    }, 250);
-  }
-
- 
- 
+  },80);
 }
+ 
+
 
 

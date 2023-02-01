@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/services/portfolio.service';
+
 import { Proyecto } from 'src/app/model/proyecto';
 import { ProyectoService } from 'src/app/services/proyecto.service';
 import { TokenService } from 'src/app/services/token.service';
@@ -10,20 +10,15 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class ProyectosComponent implements OnInit {
   project: Proyecto[] = [];
-  miPortfolio: any;
-
+  showText = false;
+  selectedIndex: number;
+  isLogged = false;
   constructor(
-    private datosPortfolio: PortfolioService,
     private proyectoS: ProyectoService,
     private tokenService: TokenService
   ) {}
-  isLogged = false;
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe((data) => {
-      this.miPortfolio = data;
-    });
-
     this.cargarProyecto();
     if (this.tokenService.getToken()) {
       this.isLogged = true;
@@ -48,5 +43,14 @@ export class ProyectosComponent implements OnInit {
         }
       );
     }
+  }
+  darkenImage(index: number) {
+    this.selectedIndex = index;
+    this.showText = true;
+  }
+
+  restoreImage(index: number) {
+    this.selectedIndex = null;
+    this.showText = false;
   }
 }
