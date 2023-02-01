@@ -12,6 +12,7 @@ export class NewprojectComponent implements OnInit {
   project: Proyecto[] = [];
   nombreP: string;
   imgP: string;
+  linkP: string
   isLogged = false;
   constructor(
     private proyectoS: ProyectoService,
@@ -34,7 +35,7 @@ export class NewprojectComponent implements OnInit {
   }
 
   onCreate(): void {
-    const proyecto = new Proyecto(this.nombreP, this.imgP);
+    const proyecto = new Proyecto(this.nombreP, this.imgP, this.linkP);
     this.proyectoS.save(proyecto).subscribe(
       (data) => {
         alert('Proyecto añadido correctamente');
