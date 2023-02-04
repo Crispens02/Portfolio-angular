@@ -1,18 +1,9 @@
 <nav class="navbar navbar-expand-lg bg-dark">
   <div class="container-fluid">
-    <a href="/">
-      <img src="assets\img\CC.webp" alt="Logo" class="logoCC" />
+    <a href="/" title="Logo personal">
+      <img src="assets\img\CC.svg" alt="Logo" class="logoCC" />
     </a>
-    <a
-      class="navbar-brand logo"
-      href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa"
-      target="_blank"
-    >
-      <img
-        class="logoAP"
-        src="{{miPortfolio?.LogoAP}}"
-        alt="Logo de argentina programa"
-    /></a>
+
     <li class="nav-item dropdown">
       <button
         type="button"
@@ -22,45 +13,51 @@
       >
         Secciones
       </button>
-      <ul class="dropdown-menu dropdown-menu-dark" style="margin-left: 0rem">
+      <ul class="dropdown-menu dropdown-menu-dark">
         <li>
-          <a class="dropdown-item" href="#item-header">Acerca de mi</a>
+          <a class="dropdown-item" href="#item-header" title="Item acerca de mi"
+            >Acerca de mi</a
+          >
         </li>
         <li>
-          <a class="dropdown-item" href="#item-historial"
+          <a class="dropdown-item" href="#item-historial" title="Item historial"
             >Historial academico</a
           >
         </li>
         <li>
-          <a class="dropdown-item" href="#item-experiencia"
+          <a
+            class="dropdown-item"
+            href="#item-experiencia"
+            title="Item experiencia"
             >Experiencia laboral
           </a>
         </li>
         <li>
-          <a class="dropdown-item" href="#item-hyss">Hard & soft skills</a>
+          <a class="dropdown-item" href="#item-hyss" title="Item hyss"
+            >Hard & soft skills</a
+          >
         </li>
         <li>
-          <a class="dropdown-item" href="#item-Proyectos">Proyectos</a>
+          <a class="dropdown-item" href="#item-Proyectos" title="Item proyectos"
+            >Proyectos</a
+          >
         </li>
         <li>
           <hr class="dropdown-divider" />
         </li>
-        <li><a class="dropdown-item" href="#item-contacto">Contacto</a></li>
+        <li>
+          <a class="dropdown-item" href="#item-contacto" title="Item contacto"
+            >Contacto</a
+          >
+        </li>
       </ul>
     </li>
     <button
       class="navbar-toggler"
-      type="button "
       data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+      data-bs-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
-
     <div
       class="collapse navbar-collapse justify-content-end"
       id="navbarSupportedContent"
@@ -70,37 +67,26 @@
           class="navbar-brand"
           href="https://www.instagram.com/cristiancrispens02/"
           target="blank"
+          title="Redireccion a instagram"
         >
-          <i
-            class="bi bi-instagram"
-            style="font-size: 2.5rem; color: rgb(28, 87, 253)"
-          >
-          </i>
+          <i class="bi bi-instagram"> </i>
         </a>
-
         <a
           class="navbar-brand"
           href="https://www.linkedin.com/in/cristian-crispens-608b48241/ "
           target="blank"
           id="linkedin"
+          title="Redireccion a linkedin"
         >
-          <i
-            class="bi bi-linkedin"
-            style="font-size: 2.5rem; color: rgb(28, 87, 253)"
-          >
-          </i>
+          <i class="bi bi-linkedin"> </i>
         </a>
-
         <a
           class="navbar-brand"
           href="https://github.com/Crispens02"
           target="blank"
+          title="Redireccion a github"
         >
-          <i
-            class="bi bi-github"
-            style="font-size: 2.5rem; color: rgb(28, 87, 253)"
-          >
-          </i>
+          <i class="bi bi-github"> </i>
         </a>
       </ul>
       <button
@@ -124,5 +110,5 @@
   </div>
 </nav>
 <div>
-  <img src="{{miPortfolio?.Portada}}" alt="Portada" class="portada" />
+  <img src="{{ miPortfolio?.Portada }}" alt="Portada" class="portada" />
 </div>

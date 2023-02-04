@@ -1,15 +1,13 @@
-<div style="background-color: rgb(0, 59, 126)">
-
-
-
-  <a
-    href="#"
-    id="toTopBtn"
-    class="cd-top js-cd-top cd-top--is-visible cd-top--fade-out float-button"
-    [ngClass]="{ show: showButton, 'float-button-show': showButton }"
-    *ngIf="showButton"
-    data-abc="true"
-  ></a>
+<a
+  href="#"
+  id="toTopBtn"
+  class="cd-top js-cd-top cd-top--is-visible cd-top--fade-out float-button"
+  [ngClass]="{ show: showButton, 'float-button-show': showButton }"
+  *ngIf="showButton"
+  data-abc="true"
+  title="Boton para volver al inicio de la pagina"
+></a>
+<body>
   <app-header></app-header>
   <app-about-me id="item-header"></app-about-me>
   <app-historial id="item-historial"></app-historial>
@@ -17,4 +15,4 @@
   <app-hyss id="item-hyss"></app-hyss>
   <app-proyectos id="item-Proyectos"></app-proyectos>
   <app-contacto id="item-contacto"></app-contacto>
-</div>
+</body>

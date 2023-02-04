@@ -11,19 +11,22 @@
       >
         Nuevo Proyecto
       </button>
-
+      <div class="text-center">
       <tr *ngFor="let Proyecto of project; let i = index">
+        <h2>{{ Proyecto.nombreP }}</h2>
         <div style="position: relative">
+          
           <a href="{{Proyecto.linkP}}" target="_blank"><img
             class="res"
             (mouseenter)="darkenImage(i)"
             (mouseleave)="restoreImage(i)"
             [src]="Proyecto.imgP"
             [ngStyle]="{ opacity: selectedIndex === i ? 0.5 : 1 }"
+            title="Link del proyecto"
           /> </a>
-          <div *ngIf="selectedIndex === i && showText">
-            <h3 class="text">{{ Proyecto.nombreP }}</h3>
-          </div>
+        
+    
+          
         </div>
 
         <td *ngIf="isLogged">
@@ -34,6 +37,7 @@
           </div>
         </td>
       </tr>
+    </div>
     </div>
   </div>
 </div>

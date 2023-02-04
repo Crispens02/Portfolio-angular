@@ -4,10 +4,15 @@
   }
 }
 
-h1,
+
+h2,
 ul,
 img {
   margin-top: 2rem;
+}
+
+h1 {
+  margin-top: 1rem;
 }
 
 img {
@@ -25,20 +30,9 @@ img {
 }
 
 img {
-  transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
-  background-repeat: no-repeat;
-  background-position: center;
-
+  transition: opacity 0.4s, transform 0.3s;
 }
 
 img:hover {
   transform: scale(1.1);
-}
-
-.text {
-  margin-top: 2rem;
-  top: 50%;
-  left: 17%;
-
-
 }
