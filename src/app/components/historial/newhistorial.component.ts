@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { EducacionService } from 'src/app/services/educacion.service';
-import { Router } from '@angular/router';
+
 import { Educacion } from 'src/app/model/educacion';
 import { TokenService } from 'src/app/services/token.service';
 @Component({
@@ -16,13 +16,11 @@ export class NewhistorialComponent implements OnInit {
   fechaInicio: Date;
   fechaFinal: Date;
   isLogged = false;
-  
+  @Output() educacionAgregada = new EventEmitter<Educacion>();
   constructor(
     private educacionS: EducacionService,
-    private router: Router,
     private tokenService: TokenService
   ) {}
-
   ngOnInit(): void {
     this.CargarEdu();
     if (this.tokenService.getToken()) {
@@ -36,17 +34,21 @@ export class NewhistorialComponent implements OnInit {
       this.edu = data;
     });
   }
-
   onCreate(): void {
-    const educacion = new Educacion(this.nombreE, this.descripcionE, this.imgE, this.fechaInicio, this.fechaFinal);
+    const educacion = new Educacion(
+      this.nombreE,
+      this.descripcionE,
+      this.imgE,
+      this.fechaInicio,
+      this.fechaFinal
+    );
     this.educacionS.save(educacion).subscribe(
       (data) => {
         alert('Educacion añadida correctamente');
-        this.router.navigate(['']);
+        this.educacionAgregada.emit(educacion);
       },
       (err) => {
         alert('falló');
-        this.router.navigate(['']);
       }
     );
   }

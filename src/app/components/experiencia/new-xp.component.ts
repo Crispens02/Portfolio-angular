@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/services/experiencia.service';
@@ -15,6 +15,7 @@ export class NewXPComponent implements OnInit {
   descripcionE: string = '';
   imgE: string = '';
   isLogged = false;
+  @Output() xpAgregada = new EventEmitter<Experiencia>();
   constructor(
     private sExperiencia: SExperienciaService,
     private router: Router,
@@ -40,11 +41,10 @@ export class NewXPComponent implements OnInit {
     this.sExperiencia.save(expe).subscribe(
       (data) => {
         alert('Experiencia añadida');
-        this.router.navigate(['']);
+        this.xpAgregada.emit(expe);
       },
       (err) => {
         alert('Falló');
-        this.router.navigate(['']);
       }
     );
   }

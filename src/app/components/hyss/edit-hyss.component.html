@@ -1,7 +1,10 @@
 <div *ngIf="!isLogged">
-  <h1>usted no tiene acceso</h1>
+  <h2>Usted no tiene acceso</h2>
 </div>
 <div *ngIf="isLogged">
+  <body>
+    <h1 class="text-center">Editar skill</h1>
+  
   <div class="container" *ngIf="skill">
     <div class="row">
       <div>
@@ -68,4 +71,5 @@
       </div>
     </div>
   </div>
+</body>
 </div>

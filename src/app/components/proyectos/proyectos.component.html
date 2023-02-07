@@ -6,38 +6,39 @@
       <button
         type="button"
         class="btn btn-primary"
-        routerLink="/newproject"
+        data-bs-toggle="modal"
+        data-bs-target="#ModalProyecto"
         *ngIf="isLogged"
       >
         Nuevo Proyecto
       </button>
-      <div class="text-center">
-      <tr *ngFor="let Proyecto of project; let i = index">
-        <h2>{{ Proyecto.nombreP }}</h2>
-        <div style="position: relative">
-          
-          <a href="{{Proyecto.linkP}}" target="_blank"><img
-            class="res"
-            (mouseenter)="darkenImage(i)"
-            (mouseleave)="restoreImage(i)"
-            [src]="Proyecto.imgP"
-            [ngStyle]="{ opacity: selectedIndex === i ? 0.5 : 1 }"
-            title="Link del proyecto"
-          /> </a>
-        
-    
-          
-        </div>
 
-        <td *ngIf="isLogged">
-          <div class="margen">
-            <button class="edit-button" (click)="delete(Proyecto.id)">
-              <i class="bi bi-trash-fill"></i>
-            </button>
+      <div class="text-center">
+        <tr *ngFor="let Proyecto of project; let i = index">
+          <h2>{{ Proyecto.nombreP }}</h2>
+          <div style="position: relative">
+            <a href="{{ Proyecto.linkP }}" target="_blank"
+              ><img
+                class="res"
+                (mouseenter)="darkenImage(i)"
+                (mouseleave)="restoreImage(i)"
+                [src]="Proyecto.imgP"
+                [ngStyle]="{ opacity: selectedIndex === i ? 0.5 : 1 }"
+                title="Link del proyecto"
+              />
+            </a>
           </div>
-        </td>
-      </tr>
-    </div>
+
+          <td *ngIf="isLogged">
+            <div class="margen">
+              <button class="edit-button" (click)="delete(Proyecto.id)">
+                <i class="bi bi-trash-fill"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </div>
     </div>
   </div>
 </div>
+<app-newproject (proyectoAgregado)="proyectoAgregado($event)"></app-newproject>

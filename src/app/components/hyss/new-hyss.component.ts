@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+
 import { Skill } from 'src/app/model/skill';
 import { SkillService } from 'src/app/services/skill.service';
 import { TokenService } from 'src/app/services/token.service';
@@ -16,9 +16,10 @@ export class NewHyssComponent implements OnInit {
   colorinterior: string;
   img: string;
   isLogged = false;
+  @Output() skillAgregada = new EventEmitter<Skill>();
   constructor(
     private skillS: SkillService,
-    private router: Router,
+
     private tokenService: TokenService
   ) {}
 
@@ -47,11 +48,10 @@ export class NewHyssComponent implements OnInit {
     this.skillS.save(skill).subscribe(
       (data) => {
         alert('Skill creada correctamente');
-        this.router.navigate(['']);
+        this.skillAgregada.emit(skill);
       },
       (err) => {
         alert('Fallo al añadir la skill');
-        this.router.navigate(['']);
       }
     );
   }

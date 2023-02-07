@@ -1,34 +1,36 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-    
-    
-
       <h1>Historial academico</h1>
 
       <button
         type="button"
         class="btn btn-primary"
-        routerLink="/nuevoHis"
+        data-bs-toggle="modal"
+        data-bs-target="#modalHistorial"
         *ngIf="isLogged"
       >
         Agregar Educacion
       </button>
-      <tr *ngFor="let Educacion of educacion">
-      
 
+      <tr *ngFor="let Educacion of educacion">
         <h2>
-          <img src="{{ Educacion.imgE }}" width="40" height="35" alt="Imagen de educacion" />
+          <img
+            src="{{ Educacion.imgE }}"
+            width="40"
+            height="35"
+            alt="Imagen de educacion"
+          />
           {{ Educacion.nombreE }}
         </h2>
-        
+
         <ul>
           <li>
             <h3>Descripcion de los estudios:</h3>
             <p>{{ Educacion.descripcionE }}</p>
           </li>
           <span>
-            {{ Educacion.fechaInicio | date : "MM/yyyy" }}  -
+            {{ Educacion.fechaInicio | date : "MM/yyyy" }} -
             {{ Educacion.fechaFinal | date : "MM/yyyy" }}
           </span>
         </ul>
@@ -48,3 +50,6 @@
     </div>
   </div>
 </div>
+<app-newhistorial
+  (educacionAgregada)="educacionAgregada($event)"
+></app-newhistorial>

@@ -27,17 +27,22 @@ export class ExperienciaComponent implements OnInit {
       this.expe = data;
     });
   }
+  xpAgregada(xp: Experiencia) {
+    this.expe.push(xp);
+  }
 
   delete(id?: number) {
     if (id != undefined) {
-      this.sExperiencia.delete(id).subscribe(
-        (data) => {
-          this.cargarExperiencia();
-        },
-        (err) => {
-          alert('No se pudo borrar la experiencia');
-        }
-      );
+      if (confirm('¿Estás seguro de querer eliminar esta skill?')) {
+        this.sExperiencia.delete(id).subscribe(
+          (data) => {
+            this.cargarExperiencia();
+          },
+          (err) => {
+            alert('No se pudo borrar la experiencia');
+          }
+        );
+      }
     }
   }
 }

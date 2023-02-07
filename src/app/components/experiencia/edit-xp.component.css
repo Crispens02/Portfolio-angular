@@ -1,3 +1,38 @@
-h1 {
-    color: black
+h2 {
+  color: #000
 }
+button {
+    margin-top: 1rem;
+}
+body {
+    background-color: rgb(0, 59, 126);
+    padding-bottom:75vh;
+}
+
+
+
+form {
+    width: 30rem;
+    margin: 0 auto; 
+    padding: 2em;
+    background-color: rgb(224, 224, 224);
+    border-radius: 2rem;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Estilo para los elementos del formulario */
+
+  
+  input.form-control {
+  
+    padding: 0.5em;
+    
+    border-radius: 3px;
+   
+  }
+  @media (max-width: 991px) {
+    form {
+      width: 75%;
+    }
+  }
+  

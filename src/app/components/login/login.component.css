@@ -16,7 +16,7 @@ h1.center {
 
 /* Estilo para el formulario */
 form {
-  width: 30%;
+  width: 30rem;
   margin: 0 auto; 
   padding: 2em;
   background-color: rgb(224, 224, 224);
@@ -39,7 +39,7 @@ input.form-control {
   border-radius: 3px;
   font-size: 1em;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   form {
     width: 75%;
   }

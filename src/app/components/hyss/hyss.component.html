@@ -5,12 +5,14 @@
 
       <button
         type="button"
-        routerLink="/newskill"
+        data-bs-toggle="modal"
+        data-bs-target="#ModalSkill"
         class="btn btn-primary"
         *ngIf="isLogged"
       >
         Nueva Skill
       </button>
+      
     </div>
 
     <div
@@ -55,3 +57,4 @@
     </div>
   </div>
 </div>
+<app-new-hyss (skillAgregada)="skillAgregada($event)"></app-new-hyss>

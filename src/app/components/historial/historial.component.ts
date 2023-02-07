@@ -10,7 +10,6 @@ import { Educacion } from 'src/app/model/educacion';
 })
 export class HistorialComponent implements OnInit {
   educacion: Educacion[] = [];
- 
 
   constructor(
     private educacionS: EducacionService,
@@ -19,8 +18,6 @@ export class HistorialComponent implements OnInit {
   isLogged = false;
 
   ngOnInit(): void {
-
-
     this.cargarEducacion();
     if (this.tokenService.getToken()) {
       this.isLogged = true;
@@ -34,17 +31,22 @@ export class HistorialComponent implements OnInit {
       this.educacion = data;
     });
   }
+  educacionAgregada(educacion1: Educacion) {
+    this.educacion.push(educacion1);
+  }
 
   delete(id?: number) {
     if (id != undefined) {
-      this.educacionS.delete(id).subscribe(
-        (data) => {
-          this.cargarEducacion();
-        },
-        (err) => {
-          alert('No se pudo eliminar');
-        }
-      );
+      if (confirm('¿Estás seguro de querer eliminar esta skill?')) {
+        this.educacionS.delete(id).subscribe(
+          (data) => {
+            this.cargarEducacion();
+          },
+          (err) => {
+            alert('No se pudo eliminar');
+          }
+        );
+      }
     }
   }
 }

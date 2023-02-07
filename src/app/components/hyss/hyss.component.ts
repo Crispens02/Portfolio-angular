@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { TokenService } from 'src/app/services/token.service';
 import { Skill } from 'src/app/model/skill';
 import { SkillService } from 'src/app/services/skill.service';
@@ -32,17 +31,23 @@ export class HyssComponent implements OnInit {
       this.skill = data;
     });
   }
+  
+  skillAgregada(skill1: Skill) {
+    this.skill.push(skill1);
+  }
 
-  delete(id: number) {
+  delete(id?: number) {
     if (id != undefined) {
-      this.skillS.delete(id).subscribe(
-        (data) => {
-          this.cargarSkills();
-        },
-        (err) => {
-          alert('No se pudo borrar la skill');
-        }
-      );
+      if (confirm('¿Estás seguro de querer eliminar esta skill?')) {
+        this.skillS.delete(id).subscribe(
+          (data) => {
+            this.cargarSkills();
+          },
+          (err) => {
+            alert('No se pudo eliminar');
+          }
+        );
+      }
     }
   }
 }

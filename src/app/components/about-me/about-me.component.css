@@ -1,19 +1,16 @@
-.h5, h2 {
-margin-top: 2rem;
-margin-bottom: 1rem;
+.h5,
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
-
 .circulo {
-width: 24%;
-height: 24%;
-
+  width: 24%;
+  height: 24%;
 }
-
 .circulo .imagen {
   width: 88.6667%;
-
   border-radius: 100%;
-  display: block; 
+  display: block;
   margin-bottom: 1rem;
   margin-block-start: -15%;
   background-color: #333;
@@ -21,10 +18,9 @@ height: 24%;
   border: 5px solid white;
   /* agregar un borde */
 }
-
 @media (max-width: 768px) {
-.circulo {
-width: 150px;
-height: 150px;
-}
+  .circulo {
+    width: 150px;
+    height: 150px;
+  }
 }

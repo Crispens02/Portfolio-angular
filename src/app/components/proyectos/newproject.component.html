@@ -1,46 +1,60 @@
-<div  *ngIf="!isLogged">
-  <h1> usted no tiene acceso</h1>
-</div>
-<div class="container" *ngIf="isLogged">
-  <div class="row">
-    <div>
-      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-        <div class="form-group">
-          <label for="nombreP">Nombre del proyecto</label>
-          <input
-            type="text"
-            class="form-control"
-            id="nombreP"
-            name="nombreP"
-            [(ngModel)]="nombreP"
-            required
-          />
-        </div>
+<div
+  class="modal fade"
+  id="ModalProyecto"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+  
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="nombreP">Nombre del proyecto</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombreP"
+              name="nombreP"
+              [(ngModel)]="nombreP"
+              required
+            />
+          </div>
 
-        <div class="form-group">
-          <label for="imgP">Imagen del proyecto</label>
-          <input
-            type="text"
-            class="form-control"
-            id="imgP"
-            name="imgP"
-            [(ngModel)]="imgP"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="imgP">link del proyecto</label>
-          <input
-            type="text"
-            class="form-control"
-            id="imgP"
-            name="imgP"
-            [(ngModel)]="linkP"
-            required
-          />
-        </div>
-        <button class="btn btn-primary">Agregar proyecto</button>
-      </form>
+          <div class="form-group">
+            <label for="imgP">Imagen del proyecto</label>
+            <input
+              type="text"
+              class="form-control"
+              id="imgP"
+              name="imgP"
+              [(ngModel)]="imgP"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="imgP">link del proyecto</label>
+            <input
+              type="text"
+              class="form-control"
+              id="imgP"
+              name="imgP"
+              [(ngModel)]="linkP"
+              required
+            />
+          </div>
+          <button class="btn btn-primary"
+          data-bs-dismiss="modal">Agregar proyecto</button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Cerrar
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 </div>

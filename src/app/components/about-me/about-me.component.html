@@ -5,23 +5,18 @@
         <div class="circulo">
           <img src="{{ persona.img }}" class="imagen" alt="Foto de perfil" />
         </div>
-        </div>
-
-
-        <h1 id="nombre">{{ persona.nombre }} {{ persona.apellido }}</h1>
-
-        <button
-          type="button"
-          class="btn btn-primary"
-          routerLink="/editabout/1"
-          *ngIf="isLogged"
-        >
-          Editar persona
-        </button>
-
-        <h2>Acerca de mi</h2>
-
-        <h5>{{ persona.descripcion }}</h5>
       </div>
+      <h1 id="nombre">{{ persona.nombre }} {{ persona.apellido }}</h1>
+      <button
+        type="button"
+        class="btn btn-primary"
+        routerLink="/editabout/1"
+        *ngIf="isLogged"
+      >
+        Editar persona
+      </button>
+      <h2>Acerca de mi</h2>
+      <h5>{{ persona.descripcion }}</h5>
     </div>
   </div>
+</div>

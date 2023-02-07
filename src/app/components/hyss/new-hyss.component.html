@@ -1,70 +1,84 @@
-<div *ngIf="!isLogged">
-  <h1>usted no tiene acceso</h1>
-</div>
-<div class="container" *ngIf="isLogged">
-  <div class="row">
-    <div>
-      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-        <div class="form-group">
-          <label for="nombreH">Nombre de la skill</label>
-          <input
-            type="text"
-            class="form-control"
-            id="nombreH"
-            name="nombreH"
-            [(ngModel)]="nombre"
-            required
-          />
-        </div>
+<div
+  class="modal fade"
+  id="ModalSkill"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="nombreH">Nombre de la skill</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombreH"
+              name="nombreH"
+              [(ngModel)]="nombre"
+              required
+            />
+          </div>
 
-        <div class="form-group">
-          <label for="porcentajeH">Porcentaje de la Skill</label>
-          <input
-            type="range"
-            class="form-control"
-            id="porcentajeH"
-            name="porcentajeH"
-            [(ngModel)]="porcentaje"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="imgH">Imagen de la Skill</label>
-          <input
-            type="text"
-            class="form-control"
-            id="imgH"
-            name="imgH"
-            [(ngModel)]="img"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="colorpicker">color exterior del circulo</label>
-          <br />
-          <input
-            type="color"
-            value="#0000ff"
-            id="colorexterior"
-            name="colorexterior"
-            [(ngModel)]="colorexterior"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="colorpicker">color interior del circulo</label>
-          <br />
-          <input
-            type="color"
-            value="#0000ff"
-            id="colorinterior"
-            name="colorinterior"
-            [(ngModel)]="colorinterior"
-            required
-          />
-        </div>
-        <button class="btn btn-primary">Agregar skill</button>
-      </form>
+          <div class="form-group">
+            <label for="porcentajeH">Porcentaje de la Skill</label>
+            <input
+              type="range"
+              class="form-control"
+              id="porcentajeH"
+              name="porcentajeH"
+              [(ngModel)]="porcentaje"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="imgH">Imagen de la Skill</label>
+            <input
+              type="text"
+              class="form-control"
+              id="imgH"
+              name="imgH"
+              [(ngModel)]="img"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="colorpicker">color exterior del circulo</label>
+            <br />
+            <input
+              type="color"
+              value="#0000ff"
+              id="colorexterior"
+              name="colorexterior"
+              [(ngModel)]="colorexterior"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="colorpicker">color interior del circulo</label>
+            <br />
+            <input
+              type="color"
+              value="#0000ff"
+              id="colorinterior"
+              name="colorinterior"
+              [(ngModel)]="colorinterior"
+              required
+            />
+          </div>
+          <button class="btn btn-primary" data-bs-dismiss="modal">
+            Agregar skill
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Cerrar
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 </div>

@@ -13,12 +13,8 @@ import { EditAboutMeComponent } from './components/about-me/edit-about-me.compon
 const routes: Routes = [
   {path: '',component:HomeComponent},
   {path: 'login',component:LoginComponent},
-  { path: 'nuevaexp', component: NewXPComponent},
   { path: 'editexp/:id', component: EditXPComponent},
-  { path: 'nuevoHis', component: NewhistorialComponent},
   { path: 'editHis/:id', component: EdithistorialComponent},
-  { path: 'newproject', component: NewprojectComponent},
-  { path: 'newskill', component: NewHyssComponent},
   { path: 'editskill/:id', component: EditHyssComponent},
   { path: 'editabout/:id', component: EditAboutMeComponent}
 /* {path: '', redirectTo: 'login', pathMatch: 'full'} */

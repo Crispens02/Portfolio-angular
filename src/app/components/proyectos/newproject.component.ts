@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { ProyectoService } from 'src/app/services/proyecto.service';
-import { Router } from '@angular/router';
 import { Proyecto } from 'src/app/model/proyecto';
 import { TokenService } from 'src/app/services/token.service';
 @Component({
@@ -12,11 +11,12 @@ export class NewprojectComponent implements OnInit {
   project: Proyecto[] = [];
   nombreP: string;
   imgP: string;
-  linkP: string
+  linkP: string;
   isLogged = false;
+  @Output() proyectoAgregado = new EventEmitter<Proyecto>();
   constructor(
     private proyectoS: ProyectoService,
-    private router: Router,
+
     private tokenService: TokenService
   ) {}
 
@@ -39,11 +39,10 @@ export class NewprojectComponent implements OnInit {
     this.proyectoS.save(proyecto).subscribe(
       (data) => {
         alert('Proyecto añadido correctamente');
-        this.router.navigate(['']);
+        this.proyectoAgregado.emit(proyecto);
       },
       (err) => {
         alert('Algo falló');
-        this.router.navigate(['']);
       }
     );
   }
