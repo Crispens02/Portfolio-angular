@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <h1>Experiencia laboral</h1>
+      <h1 class="text-center">Experiencia laboral</h1>
 
       <button
         type="button"
-        class="btn btn-primary"
+        class="btn btn-primary newxp"
         data-bs-toggle="modal"
         data-bs-target="#modalXp"
         *ngIf="isLogged"
@@ -13,7 +13,8 @@
         Nueva Experiencia
       </button>
 
-      <tr *ngFor="let Experiencia of expe">
+      <div *ngFor="let Experiencia of expe">
+        <div class="alert">
         <h2>
           <img
             src="{{ Experiencia.imgE }}"
@@ -23,27 +24,27 @@
           />
           {{ Experiencia.nombreE }}
         </h2>
-        <ul>
-          <li>
-            <span>{{ Experiencia.descripcionE }}</span>
-          </li>
-        </ul>
-        <td *ngIf="isLogged">
+        <div *ngIf="isLogged"  class="buttonsContainer margin-icons">
           <button
             class="edit-button"
             routerLink="/editexp/{{ Experiencia.id }}"
           >
             <i class="bi bi-pencil-fill"></i>
           </button>
-        </td>
-        <td *ngIf="isLogged">
-          <div class="margen">
+       
             <button class="delete-button" (click)="delete(Experiencia.id)">
-              <i class="bi bi-trash-fill"></i>
+              <i class="bi bi-x-lg"></i>
             </button>
           </div>
-        </td>
-      </tr>
+
+        <ul>
+          <li>
+            <span>{{ Experiencia.descripcionE }}</span>
+          </li>
+        </ul>
+      
+      </div>
+    </div>
     </div>
   </div>
 </div>

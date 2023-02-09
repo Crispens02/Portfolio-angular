@@ -1,5 +1,8 @@
-.margen {
+.margin-icons {
   margin-left: 0.3rem;
+}
+.newxp {
+  margin-bottom: 1rem;
 }
 
 .edit-button,
@@ -9,8 +12,24 @@
   color: white;
 }
 
-h1,
+
 h2,
 ul {
   margin-top: 1rem;
+}
+
+h1{
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.alert {
+  background-color: rgb(1, 95, 173);
+}
+
+.buttonsContainer {
+  position: absolute;
+  right: 0;
+  top: 0;
+
 }

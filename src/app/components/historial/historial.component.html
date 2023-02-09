@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <h1>Historial academico</h1>
+      <h1 class="text-center">Historial academico</h1>
 
       <button
         type="button"
-        class="btn btn-primary"
+        class="btn btn-primary newedu"
         data-bs-toggle="modal"
         data-bs-target="#modalHistorial"
         *ngIf="isLogged"
@@ -13,43 +13,48 @@
         Agregar Educacion
       </button>
 
-      <tr *ngFor="let Educacion of educacion">
-        <h2>
-          <img
-            src="{{ Educacion.imgE }}"
-            width="40"
-            height="35"
-            alt="Imagen de educacion"
-          />
-          {{ Educacion.nombreE }}
-        </h2>
+      <div *ngFor="let Educacion of educacion">
+        <div class="alert">
+          <div>
+            <h2>
+              <img
+                src="{{ Educacion.imgE }}"
+                width="40"
+                height="35"
+                alt="Imagen de educacion"
+              />
+              {{ Educacion.nombreE }}
+            </h2>
+            <div *ngIf="isLogged" class="buttonsContainer">
+              <button
+                class="edit-button"
+                routerLink="/editHis/{{ Educacion.id }}"
+              >
+                <i class="bi bi-pencil-fill"></i>
+              </button>
 
-        <ul>
-          <li>
-            <h3>Descripcion de los estudios:</h3>
-            <p>{{ Educacion.descripcionE }}</p>
-          </li>
-          <span>
-            {{ Educacion.fechaInicio | date : "MM/yyyy" }} -
-            {{ Educacion.fechaFinal | date : "MM/yyyy" }}
-          </span>
-        </ul>
-        <td *ngIf="isLogged">
-          <button class="edit-button" routerLink="/editHis/{{ Educacion.id }}">
-            <i class="bi bi-pencil-fill"></i>
-          </button>
-        </td>
-        <td *ngIf="isLogged">
-          <div class="margen">
-            <button class="delete-button" (click)="delete(Educacion.id)">
-              <i class="bi bi-trash-fill"></i>
-            </button>
+              <button class="delete-button" (click)="delete(Educacion.id)">
+                <i class="bi bi-x-lg"></i>
+              </button>
+            </div>
+            <ul>
+              <li>
+                <h3>Descripcion de los estudios:</h3>
+                <p>{{ Educacion.descripcionE }}</p>
+              </li>
+              <span>
+                {{ Educacion.fechaInicio | date : "MM/yyyy" }} -
+                {{ Educacion.fechaFinal | date : "MM/yyyy" }}
+              </span>
+            </ul>
           </div>
-        </td>
-      </tr>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 <app-newhistorial
   (educacionAgregada)="educacionAgregada($event)"
 ></app-newhistorial>
+
+<!--   <div dragula="DRAGULA_FACTS"> -->
