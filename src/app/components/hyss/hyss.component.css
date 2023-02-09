@@ -31,3 +31,13 @@ h1 {
 button {
   margin-bottom: 1rem;
 }
+.buttonsContainer {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.alert
+{
+  background-color: transparent;
+}
+

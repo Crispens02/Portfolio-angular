@@ -24,7 +24,6 @@ import { EditHyssComponent } from './components/hyss/edit-hyss.component';
 import { NewHyssComponent } from './components/hyss/new-hyss.component';
 import { EditAboutMeComponent } from './components/about-me/edit-about-me.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 @NgModule({
   declarations: [
     AppComponent,

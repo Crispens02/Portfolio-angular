@@ -7,6 +7,7 @@ import { Educacion } from 'src/app/model/educacion';
   selector: 'app-historial',
   templateUrl: './historial.component.html',
   styleUrls: ['./historial.component.css'],
+ 
 })
 export class HistorialComponent implements OnInit {
   educacion: Educacion[] = [];

@@ -16,21 +16,22 @@
     </div>
 
     <div
-      class="text-center col-sm-4 col-md-4 col-lg-4 circulo"
+      class="text-center col-sm-6 col-md-4 col-lg-4 circulo"
       *ngFor="let Hyss of skill"
     >
-      <div>
-        <td *ngIf="isLogged">
+     <div class="alert">
+      <div class="buttonsContainer">
+        <div *ngIf="isLogged">
           <button class="edit-button" routerLink="/editskill/{{ Hyss.id }}">
             <i class="bi bi-pencil-fill"></i>
           </button>
-        </td>
-        <td *ngIf="isLogged">
+        
           <button class="delete-button" (click)="delete(Hyss.id)">
-            <i class="bi bi-trash-fill"></i>
+            <i class="bi bi-x-lg"></i>
           </button>
-        </td>
+        </div>
       </div>
+    
       <figure>
         <circle-progress
           [percent]="Hyss.porcentaje"
@@ -51,9 +52,12 @@
           [animation]="true"
           [animationDuration]="600"
         >
+      
         </circle-progress>
+      
         <figcaption style="color: white">{{ Hyss.nombre }}</figcaption>
       </figure>
+    </div>
     </div>
   </div>
 </div>
